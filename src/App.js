@@ -14,9 +14,7 @@ const containerStyle = {
 
 class App extends Component {
   state = {
-    data: undefined,
-    center: [-74.0392707, 40.7591704],
-    zoom: 12
+    data: undefined
   }
 
   componentWillMount() {
@@ -36,9 +34,7 @@ class App extends Component {
 
     const map = new MapboxGl.Map({
       container: this.container,
-      style: STYLE,
-      center: this.state.center,
-      zoom: this.state.zoom
+      style: STYLE
     });
 
     map.on('load', () => {
